@@ -45,25 +45,20 @@
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         default_layer {
-            // ┌────────────────────────────────────────────┐
-
             label = "Default";
-
-            // └────────────────────────────────────────────┘
             /*
 ┌───────┬───────┬───────┬───────┬───────┬───────┐                   ┌───────┬───────┬───────┬───────┬───────┬───────┐
-│   ]   │   Q   │   W   │   E   │   R   │   T   │                   │   Y   │   U   │   I   │   O   │   P   │   [   │
-├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤                      
-│   `   │   A   │   S   │   D   │   F   │   G   │                   │   H   │   J   │   K   │   L   │   ;   │   '   │
+│TAB/CMD│   Q   │   W   │   E   │   R   │   T   │                   │   Y   │   U   │   I   │   O   │   P   │BSP/CMD│
 ├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤
-│   \   │ Z/NAV │   X   │   C   │   V   │   B   │                   │   N   │   M   │   ,   │   .   │   /   │   -   │
+│ LALT  │   A   │   S   │   D   │   F   │   G   │                   │   H   │   J   │   K   │   L   │   ;   │ RALT  │
+├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤
+│ LSHFT │   Z   │   X   │   C   │   V   │   B   │                   │   N   │   M   │   ,   │   .   │   /   │ RSHFT │
 └───────┴───────┴───────┴───────┼───────┼───────┼───────┐   ┌───────┼───────┼───────┼───────┴───────┴───────┴───────┘
-                                │ RAISE │ SPACE │ LOWER │   │ LOWER │  BKSP │ RAISE │
-                                └───────┴───────┴───────┘   └───────┴───────┴───────┘   
-*/
-
+                                │ LCTRL │  L1   │ SPACE │   │ SPACE │  L1   │ RCTRL │
+                                └───────┴───────┴───────┘   └───────┴───────┴───────┘
+            */
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E  &kp R             &kp T                        &kp Y  &kp U              &kp I      &kp O    &kp P     &kp BACKSPACE
+&mt LGUI TAB    &kp Q  &kp W  &kp E  &kp R             &kp T                        &kp Y  &kp U              &kp I      &kp O    &kp P     &mt RGUI BACKSPACE
 &kp LEFT_ALT    &kp A  &kp S  &kp D  &kp F             &kp G                        &kp H  &kp J              &kp K      &kp L    &kp SEMI  &kp RIGHT_ALT
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V             &kp B                        &kp N  &kp M              &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
                                      &kp LEFT_CONTROL  &mo 1  &kp SPACE  &kp SPACE  &mo 1  &kp RIGHT_CONTROL
@@ -73,82 +68,93 @@
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         upper {
-            // ┌────────────────────────────────────────────┐
-
             label = "Upper";
-
-            // └────────────────────────────────────────────┘
             /*
 ┌───────┬───────┬───────┬───────┬───────┬───────┐                   ┌───────┬───────┬───────┬───────┬───────┬───────┐
-│ CAPS  │  F10  │  F9   │  F8   │  F7   │   ~   │                   │   !   │   @   │   #   │   $   │   %   │ RGUI  │
-├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤                      
-│ CTRL  │  F11  │  F3   │  F2   │  F1   │ MENU  │                   │   :   │   ?   │   *   │   (   │   )   │   &   │
+│  ESC  │   1   │   2   │   3   │   4   │   5   │                   │ HOME  │   ↑   │  END  │   -   │   =   │  DEL  │
 ├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤
-│ LALT  │  F12  │  F6   │  F5   │  F4   │ LANG  │                   │   \   │   «   │   »   │   {   │   }   │   ^   │
+│   ▽   │ CAPS  │   |   │   `   │ PGUP  │ PGDN  │                   │   ←   │   ↓   │   →   │   .   │   '   │   ▽   │
+├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤
+│   ▽   │   6   │   7   │   8   │   9   │   0   │                   │  INS  │   [   │   ]   │   \   │   ~   │   ▽   │
 └───────┴───────┴───────┴───────┼───────┼───────┼───────┐   ┌───────┼───────┼───────┼───────┴───────┴───────┴───────┘
-                                │  ADJ  │ LSHFT │   ▼   │   │   ▼   │ RSHFT │  ADJ  │
-                                └───────┴───────┴───────┘   └───────┴───────┴───────┘   
-*/
-
+                                │  L4   │  L3   │ ENTER │   │ ENTER │  L3   │   ▽   │
+                                └───────┴───────┴───────┘   └───────┴───────┴───────┘
+            */
             bindings = <
-&kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_0                        &kp HOME    &kp UP            &kp END            &kp MINUS      &kp EQUAL         &kp DELETE
-&trans   &caps_word    &trans        &kp GRAVE     &kp PG_UP     &kp PG_DN                           &kp LEFT    &kp DOWN          &kp RIGHT          &kp DOT        &kp SINGLE_QUOTE  &trans
-&trans   &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                        &kp INSERT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp KP_SLASH      &trans
-                                                   &trans        &mo 3         &kp ENTER  &kp ENTER  &mo 3       &trans
+&kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                        &kp HOME    &kp UP            &kp END            &kp MINUS      &kp EQUAL         &kp DELETE
+&trans   &caps_word    &kp PIPE      &kp GRAVE     &kp PG_UP     &kp PG_DN                           &kp LEFT    &kp DOWN          &kp RIGHT          &kp DOT        &kp SINGLE_QUOTE  &trans
+&trans   &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                        &kp INSERT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp TILDE         &trans
+                                                   &mo 4         &mo 3         &kp ENTER  &kp ENTER  &mo 3       &trans
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄		
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         kb_control_layer {
-            // ┌────────────────────────────────────────────┐
-
             label = "KBCTRL";
-
-            // └────────────────────────────────────────────┘
             /*
 ┌───────┬───────┬───────┬───────┬───────┬───────┐                   ┌───────┬───────┬───────┬───────┬───────┬───────┐
-│ BKSP  │   *   │   9   │   8   │   7   │   +   │                   │ NEXT  │ VOLU  │ PSCRN │       │       │ RGUI  │
-├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤                      
-│ CTRL  │   /   │   3   │   2   │   1   │   0   │                   │ PLAY  │ VOLD  │       │       │       │ CTRL  │
+│ BOOT  │  BT0  │  BT1  │  BT2  │  BT3  │  BT4  │                   │ VOL+  │ VOL-  │ MUTE  │       │       │ BOOT  │
 ├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤
-│ ALT/= │   .   │   6   │   5   │   4   │   -   │                   │ PREV  │ MUTE  │       │       │       │ RALT  │
+│ RESET │       │       │       │       │ BTNXT │                   │ PLAY  │ NEXT  │ PREV  │       │       │ RESET │
+├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤
+│CLRALL │BTCLR  │       │       │       │ BTPRV │                   │ PSCRN │       │       │       │       │STUDIO │
 └───────┴───────┴───────┴───────┼───────┼───────┼───────┐   ┌───────┼───────┼───────┼───────┴───────┴───────┴───────┘
-                                │   ▲   │ LSHFT │  ADJ  │   │  ADJ  │ RSHFT │   ▲   │
-                                └───────┴───────┴───────┘   └───────┴───────┴───────┘  
-*/
-
+                                │       │       │  TO0  │   │  TO0  │       │       │
+                                └───────┴───────┴───────┘   └───────┴───────┴───────┘
+            */
             bindings = <
-&bootloader     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &none  &none  &none  &none  &none  &bootloader
-&sys_reset      &none         &none         &none         &none         &bt BT_NXT                  &none  &none  &none  &none  &none  &sys_reset
-&bt BT_CLR_ALL  &bt BT_CLR    &none         &none         &none         &bt BT_PRV                  &none  &none  &none  &none  &none  &studio_unlock
-                                                          &none         &none         &to 0  &to 0  &none  &none
+&bootloader     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &none          &none  &bootloader
+&sys_reset      &none         &none         &none         &none         &bt BT_NXT                  &kp C_PP      &kp C_NEXT    &kp C_PREV  &none          &none  &sys_reset
+&bt BT_CLR_ALL  &bt BT_CLR    &none         &none         &none         &bt BT_PRV                  &kp PSCRN     &none         &none       &none          &none  &studio_unlock
+                                                          &none         &none         &to 0  &to 0  &none         &none
             >;
         };
+
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         flayer {
+            label = "F";
+            /*
+┌───────┬───────┬───────┬───────┬───────┬───────┐                   ┌───────┬───────┬───────┬───────┬───────┬───────┐
+│  F11  │  F1   │  F2   │  F3   │  F4   │  F10  │                   │   ▽   │   ▽   │  F13  │  F14  │  F15  │   ▽   │
+├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤
+│  F12  │   ▽   │   ▽   │   ▽   │   ▽   │  TO2  │                   │  TO2  │   ▽   │   ▽   │  F16  │  F17  │   ▽   │
+├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤
+│   ▽   │  F5   │  F6   │  F7   │  F8   │  F9   │                   │   ▽   │   ▽   │   ▽   │   ▽   │   ▽   │   ▽   │
+└───────┴───────┴───────┴───────┼───────┼───────┼───────┐   ┌───────┼───────┼───────┼───────┴───────┴───────┴───────┘
+                                │   ▽   │   ▽   │   ▽   │   │   ▽   │   ▽   │   ▽   │
+                                └───────┴───────┴───────┘   └───────┴───────┴───────┘
+            */
             bindings = <
-&kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F10                  &trans  &trans  &trans  &kp F14  &kp F15  &trans
-&kp F12  &trans  &trans  &trans  &trans  &to 2                    &to 2   &trans  &trans  &kp F16  &kp F17  &trans
-&trans   &kp F5  &kp F6  &kp F7  &kp F8  &kp F9                   &trans  &trans  &trans  &trans   &trans   &trans
+&kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F10                  &trans  &trans  &kp F13  &kp F14  &kp F15  &trans
+&kp F12  &trans  &trans  &trans  &trans  &to 2                    &to 2   &trans  &trans   &kp F16  &kp F17  &trans
+&trans   &kp F5  &kp F6  &kp F7  &kp F8  &kp F9                   &trans  &trans  &trans   &trans   &trans   &trans
                                  &trans  &trans   &trans  &trans  &trans  &trans
             >;
-
-            label = "F";
         };
 
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
         nrow_plus_layer {
+            label = "NRowPlus";
+            /*
+┌───────┬───────┬───────┬───────┬───────┬───────┐                   ┌───────┬───────┬───────┬───────┬───────┬───────┐
+│   ▽   │   1   │   2   │   3   │   4   │   5   │                   │   6   │   7   │   8   │   9   │   0   │   ▽   │
+├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤
+│   ▽   │   !   │   @   │   #   │   $   │   %   │                   │   ^   │   &   │   *   │   (   │   )   │   ▽   │
+├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤
+│   ▽   │   ▽   │   ▽   │   ▽   │   ▽   │   ▽   │                   │   ▽   │   ▽   │   ▽   │   ▽   │   ▽   │   ▽   │
+└───────┴───────┴───────┴───────┼───────┼───────┼───────┐   ┌───────┼───────┼───────┼───────┴───────┴───────┴───────┘
+                                │   ▽   │   ▽   │   ▽   │   │   ▽   │   ▽   │   ▽   │
+                                └───────┴───────┴───────┘   └───────┴───────┴───────┘
+            */
             bindings = <
 &trans  &kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4      &kp NUMBER_5                      &kp NUMBER_6      &kp NUMBER_7      &kp NUMBER_8      &kp NUMBER_9      &kp NUMBER_0      &trans
 &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(NUMBER_0)  &trans
 &trans  &trans            &trans            &trans            &trans            &trans                            &trans            &trans            &trans            &trans            &trans            &trans
                                                               &trans            &trans            &trans  &trans  &trans            &trans
             >;
-
-            label = "NRowPlus";
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄		
     };
 };
